@@ -51,7 +51,7 @@
 
     <v-col justify="start" align="center" cols="md-5 sm-12" class="offset-md-1">
      <v-carousel cycle interval="3300" show-arrows-on-hover hide-delimiters height="300" >
-       <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="90%" width="130%" :src="quote"></v-img></v-carousel-item>
+       <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="90%" width="120%" :src="quote"></v-img></v-carousel-item>
 
 
      </v-carousel>
@@ -204,7 +204,6 @@ export default {
     "https://cdn.shopify.com/s/files/1/0017/0432/9285/files/programming-quotes-for-developers-made4dev-code-as-if.jpg?v=1539287546",
     "https://protocoderspoint.com/wp-content/uploads/2020/01/First-solve-the-problem.-Then-write-the-code.jpeg",
     "https://wallpaperaccess.com/full/314827.jpg",
-    "https://i.insider.com/522b4e6ceab8ea370497b160?width=750&format=jpeg&auto=webp",
     "https://c4.wallpaperflare.com/wallpaper/836/933/123/keep-calm-coder-programming-code-wallpaper-preview.jpg"],
     projects:[
       {
