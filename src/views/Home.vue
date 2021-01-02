@@ -50,7 +50,7 @@
     </v-col>
 
     <v-col justify="start" align="center" cols="md-5 sm-12" class="offset-md-1">
-     <v-carousel cycle show-arrows-on-hover hide-delimiters height="400" >
+     <v-carousel cycle show-arrows-on-hover hide-delimiters height="300" >
        <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="100%" width="150%" :src="quote"></v-img></v-carousel-item>
 
 
