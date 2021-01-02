@@ -30,7 +30,7 @@
             </v-card>
 
     </v-flex>
-    <v-dialog v-model="postDialog" width="50%">
+    <v-dialog v-model="postDialog" width="80%">
         <v-card >
             <v-sheet dark class="grey darken-4"><v-card-title>{{data.title}}</v-card-title></v-sheet>
             <v-card-subtitle>{{data.author}}</v-card-subtitle>
@@ -38,7 +38,7 @@
         </v-card>
 
     </v-dialog>
-  
+
 
 </v-layout>
 </v-container>
