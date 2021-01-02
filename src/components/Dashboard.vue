@@ -82,16 +82,16 @@ export default{
     }),
     methods:{
         viewPost(id){
-            axios.get(`http://127.0.0.1:3000/api/post/view/${id}`)
+            axios.get(`https://blog975.herokuapp.com/api/post/view/${id}`)
             .then(data=>{this.data=data.data;this.postDialog=true;})
         }
         },
         liked(post){
             if(post.liked==0){
-                    axios.post(`http://127.0.0.1:3000/api/post/like/`,{boo:1,id:post._id})
+                    axios.post(`https://blog975.herokuapp.com/api/post/like/`,{boo:1,id:post._id})
                     .then(window.location.reload())
             }
-            else { axios.post(`http://127.0.0.1:3000/api/post/like/`,{boo:0,id:post._id})
+            else { axios.post(`https://blog975.herokuapp.com/api/post/like/`,{boo:0,id:post._id})
                    .then(window.location.reload())
             }
         },
