@@ -1,8 +1,8 @@
 <template>
 <nav>
     <v-toolbar dark>
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
-     <a flat href="http://127.0.0.1:3000/">   <v-toolbar-title  class="text-uppercase font-weight-light">
+
+      <v-toolbar-title  class="text-uppercase font-weight-light" id="title">
             My<span class="text-uppercase font-weight-bold">Blog's</span>
         </v-toolbar-title></a>
         <v-spacer></v-spacer>
@@ -32,5 +32,12 @@ export default{
 a,a:hover,a:active,a:focus{
     text-decoration:none;
     color:inherit;
+}
+
+#title{
+
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background:linear-gradient(to right , rgb(222, 150, 231),rgb(119, 230, 143))
 }
 </style>

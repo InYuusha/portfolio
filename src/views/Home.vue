@@ -30,12 +30,11 @@
 
      <v-tabs-items v-model="tab">
        <v-tab-item :key="pages[0]">
-         <div class="about">
 
 
 
-  <v-row  justify="center" class="dark" align="center" style="padding:30px;background:inherit">
-    <v-col cols="md-6 sm-8" align="center">
+  <v-row class="d-flex flex-wrap-reverse" justify="center"  align="center" style="padding:30px;background:inherit">
+    <v-col cols="md-6 sm-12" align="center" >
       <v-card  flat  style="background:inherit;border-radius:10px" >
         <v-card-title class="display-2 font-weight-bold mb-4 ">Hello I'am Ankush.</v-card-title>
         <v-card-text>Currently Iam a engineering student at BVPCOEP , Iam a frontend developer , although Iam capable of doing server side programming.
@@ -50,7 +49,7 @@
 
     </v-col>
 
-    <v-col justify="start" align="center" cols="md-5 sm-4" class="offset-md-1">
+    <v-col justify="start" align="center" cols="md-5 sm-12" class="offset-md-1">
      <v-carousel cycle show-arrows-on-hover hide-delimiters height="400" >
        <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="100%" width="150%" :src="quote"></v-img></v-carousel-item>
 
@@ -119,9 +118,9 @@
     <div class="project">
        <v-card class="mb-7 offset-1" width="80%" dark v-for="(project ,key) in projects" :key="key">
       <v-row align="center" justify="center">
-        <v-col cols="6">
-          <v-img  max-width="400" max-height="350" :src="project.img"></v-img></v-col>
-        <v-col cols="6">
+        <v-col cols="md-6 sm-12">
+          <v-img  max-width="400" max-height="450" :src="project.img"></v-img></v-col>
+        <v-col cols="md-6 sm-12">
           <v-card-title>{{project.title}}</v-card-title>
           <v-card-subtitle>{{project.desc}}</v-card-subtitle>
           <v-card-text>Tools/tech used : {{project.tech}}</v-card-text>

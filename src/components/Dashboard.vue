@@ -38,28 +38,7 @@
         </v-card>
 
     </v-dialog>
-    <v-dialog v-model="editDialog">
-         <v-card>
-          <v-sheet dark class="grey darken-4"> <v-card-title >Edit Post</v-card-title></v-sheet>
-          <v-card-text>
-              <form action="http://127.0.0.1:3000/api/post/update" method="post">
-
-                   <v-text-field label="id" name="id" :value="id"></v-text-field>
-                   <v-text-field label="Title" value name="title" :value="title"></v-text-field>
-
-                   <v-textarea label="Content" :value="content" name="content"></v-textarea>
-
-                   <v-text-field label="Author" :value="author" name="author"></v-text-field>
-                       <input type="submit" style="color:white;background:cornflowerblue;padding:10px;border-radius:5px;">
-
-              </form>
-
-
-          </v-card-text>
-
-        </v-card>
-
-    </v-dialog>
+  
 
 </v-layout>
 </v-container>
