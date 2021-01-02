@@ -1,15 +1,14 @@
 <template>
 <v-container>
-   <v-toolbar flat  class="mb-7" style="background:inherit">
+
+      <v-toolbar flat  class="mb-7" style="background:inherit">
 
       <v-toolbar-title id="title" class="font-weight-bold display-1"><span class="text-uppercase font-weight-light">singh</span>ANKUSH</v-toolbar-title>
 
       <v-spacer></v-spacer>
-       <template v-slot:extension>
-        <v-tabs
-          v-model="tab"
-          align-with-title
-        >
+       <template v-slot:extension >
+
+          <v-tabs v-model="tab" show-arrows right>
           <v-tabs-slider color="yellow"></v-tabs-slider>
 
           <v-tab
@@ -19,8 +18,14 @@
             {{ page }}
           </v-tab>
         </v-tabs>
+
+
+
+
       </template>
       </v-toolbar>
+
+
 
 
      <v-tabs-items v-model="tab">
@@ -32,7 +37,7 @@
   <v-row  justify="center" class="dark" align="center" style="padding:30px;background:inherit">
     <v-col cols="md-6 sm-8" align="center">
       <v-card  flat  style="background:inherit;border-radius:10px" >
-        <v-card-title class="display-3 font-weight-bold mb-4 ">Hello I'am Ankush.</v-card-title>
+        <v-card-title class="display-2 font-weight-bold mb-4 ">Hello I'am Ankush.</v-card-title>
         <v-card-text>Currently Iam a engineering student at BVPCOEP , Iam a frontend developer , although Iam capable of doing server side programming.
 
         I am a self taught programming enthusiast , I have done some projects using python then recently I switched to web , I love  vue.js and for backened i learnt node.js
@@ -60,10 +65,10 @@
 
   </v-tab-item>
   <v-tab-item :key="pages[1]">
-    <v-row class="mb-7">
+    <v-row class="mb-7" fluid>
       <v-col>
-        <v-card>
-         <v-sheet dark class="secondary" elevation="18"><v-card-title class="offset-5">Skills</v-card-title></v-sheet>
+        <v-card >
+         <v-sheet class="primary" dark  elevation="18"><v-card-title class="  offset-5" >Skills</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
             <tr v-for="(skill ,key) in abilities.skills">
@@ -79,8 +84,8 @@
 
     <v-row class="mb-7">
       <v-col>
-         <v-card>
-         <v-sheet dark class="secondary" elevation="18"><v-card-title class="offset-5">Tools</v-card-title></v-sheet>
+         <v-card >
+         <v-sheet dark class="primary" elevation="18"><v-card-title class="offset-5">Tools</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
             <tr v-for="(skill ,key) in abilities.tools">
@@ -96,7 +101,7 @@
       <v-row class="mb-7">
       <v-col>
          <v-card>
-         <v-sheet dark class="secondary" elevation="18"><v-card-title class="offset-5">Communication</v-card-title></v-sheet>
+         <v-sheet dark class="primary" elevation="18"><v-card-title class="offset-5">Communication</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
             <tr v-for="(skill ,key) in abilities.communication">
@@ -139,7 +144,7 @@
 
 
 
-           <Navbar />
+    <Navbar />
   <v-main style="max-height:75vh; overflow-y:scroll">
     <Dashboard :posts="posts" />
 
@@ -155,7 +160,7 @@
     <v-tab-item :key="pages[4]">
    <div class="contact"  style="background-color:inherit">
       <v-card  >
-      <v-card-title>Lets Talk</v-card-title>
+      <v-card-title>Ask me anything </v-card-title>
       <v-card-actions>
         <v-btn icon href="mailto:asuse975@gmail.com?subject=subject&cc=cc@example.com"><v-icon x-large>mdi-gmail</v-icon></v-btn>
         <v-btn icon href="https://www.instagram.com/zeldoris_001/" x-large><v-icon  x-large>mdi-instagram</v-icon></v-btn>
@@ -237,12 +242,12 @@ export default {
       ],
       abilities:{
         skills:[
-          ['Python',4],['HTML(5)',4],['CSS(3)',4],
-          ['Bootstrap Framework',4],['Vuetify',3.5],
-          ['JavaScript',3],
+         ['HTML(5)',4],['CSS(3)',4],
+          ['Bootstrap Framework',4],['Vuetify',3.5], ['Python',4],
+          ['JavaScript',3],['Node.js',3],['Express.js',3],
           ['Command line Interface',3],
           ['JSON',3],
-          ['Vue.js',2.5],['C++',2],['Firebase',1]
+          ['Vue.js',3],['C++',2],['Firebase',1]
         ],
         communication:[
           ['Hindi(Mother Tongue)',4],['English',4],['Japanese(Konichiwa)',1]
