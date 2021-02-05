@@ -36,11 +36,12 @@
   <v-row class="d-flex flex-wrap-reverse" justify="center"  align="center" style="padding:30px;background:inherit">
     <v-col cols="md-6 sm-12" align="center" >
       <v-card  flat  style="background:inherit;border-radius:10px" >
-        <v-card-title class="display-2 font-weight-bold mb-4 ">Hello I'am Ankush.</v-card-title>
-        <v-card-text>Currently Iam a engineering student at BVPCOEP , Iam a frontend developer , although Iam capable of doing server side programming.
+        <v-card-title class="display-2 font-weight-bold mb-4 ">Hello I'm Ankush.</v-card-title>
+        <v-card-text>Currently Iam a engineering student at BVPCOEP . Iam a frontend developer , Although Iam capable of doing server side programming.
 
-        I am a self taught programming enthusiast , I have done some projects using python then recently I switched to web , I love  vue.js and for backened i learnt node.js
-        I have a long way to go, there are a lot of things i want to learn and i think i have only covered a fraction of it, but with every passing day iam more closer to it..
+        Iam a self taught programming enthusiast , I have done some projects using python then recently I switched to web , I love  vue.js and for backened i learnt node.js
+        I have a long way to go, there are a lot of things I want to learn and I think I have only covered a fraction of it, but with every passing day iam more closer to it..
+       And that really gives me hope :). Currently Iam learning devops
          Iam actively looking for internship oppurtunities.<strong>Offers related to internship are highly welcome !</strong>
 
         </v-card-text>
@@ -60,7 +61,7 @@
 
 
   </v-row>
-         </div>
+       
 
   </v-tab-item>
   <v-tab-item :key="pages[1]">
@@ -100,7 +101,7 @@
       <v-row class="mb-7">
       <v-col>
          <v-card>
-         <v-sheet dark class="primary" elevation="18"><v-card-title class="offset-5">Communication</v-card-title></v-sheet>
+         <v-sheet dark class="primary" elevation="18"><v-card-title class="offset-md-5 sm-2" >Communication</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
             <tr v-for="(skill ,key) in abilities.communication">
@@ -123,9 +124,10 @@
         <v-col cols="md-6 sm-12">
           <v-card-title>{{project.title}}</v-card-title>
           <v-card-subtitle>{{project.desc}}</v-card-subtitle>
-          <v-card-text>Tools/tech used : {{project.tech}}</v-card-text>
+          <v-chip v-for="(tool,key) in project.tech" color="blue darken-2">{{tool}} </v-chip>
           <v-card-actions>
             <v-btn :href="project.github" icon><v-icon >mdi-github</v-icon></v-btn>
+            <v-btn :href="project.link" icon ><v-icon>mdi-application</v-icon></v-btn>
 
           </v-card-actions>
         </v-col>
@@ -211,33 +213,42 @@ export default {
         desc:'Family diary is a diary app for writing about those important people in your life , You can write about their favourite things , you can even rate them accoding to your liking to them',
         github:'https://github.com/InYuusha/InYuusha.github.io',
         link:'https://inyuusha.github.io/',
-        tech:"Vue.js ,Firebase firestore, javascript,vuetify ",
+        tech:['Vue.js','Node.js','MongoDB','Vuetify'],
         img:'https://assets.devfolio.co/hackathons/7de2289ce08f45da8caa0faa5af96e84/projects/07b9ba018753434aa3a352b827ff7e25/picf614j3fpr.png'
       },
+                   {
+        title:'User Authentication System',
+        desc:'User Authentication using Node.js  , mongoose ,  mongodb , passport.js',
+        github:'https://github.com/InYuusha/user_auth',
+        tech:['Passport.js','Node.js','MongoDB','bcrypt'],
+        link:'http://auth975.herokuapp.com',
+        img:'https://devfolio-prod.s3.ap-south-1.amazonaws.com/projects/343036c7a94842ca9d7058089cec1034/pickqkdhig36.png'
+      },
            {
-        title:'Portfolio web',
-        desc:'A portfolio site using vue.js',
+        title:'Personal Portfolio',
+        desc:'A Portfolio site using vue.js',
         github:'',
-        tech:"Vue.js,vuetify",
-        link:'',
+        tech:['Vue.js','Node.js','MongoDB','Vuetify'],
+        link:'http://inyuusha975.netlify.app',
         img:'https://assets.devfolio.co/projects/7abfd67bfb0141a79fe77c0568293659/pic9ubull827.png'
       },
            {
         title:'Weather Application',
-        desc:'A simple weather application , Enter your city and get weather details...',
+        desc:'A Simple weather application , Enter your city and get weather details...',
         github:'https://github.com/InYuusha/weather',
-        tech:"Vue.js, Api , javascript,bootstrap ",
+          tech:['Express.js','Node.js','Api','Bootstrap'],
         link:'',
         img:'https://assets.devfolio.co/projects/e6f7de1204aa464cbd03969d333d0528/picmgahlnxui.png'
       },
               {
         title:'A Blog app',
-        desc:'A blog application using Node.js , vue.js , mongoose ,  mongodb',
+        desc:'A CRUD based Blog application',
         github:'https://github.com/InYuusha/blog2',
-        tech:"Vue.js, Api , javascript, mongodb ",
-        link:'',
-        img:'https://assets.devfolio.co/projects/dc76c56d6e1a44e784fbaa6404f229bf/pic807xkss92.png'
+        tech:['Vue.js','Node.js','MongoDB','Vuetify','Api'],
+        link:'http://blog975.netlify.app',
+        img:'https://devfolio-prod.s3.ap-south-1.amazonaws.com/projects/dc76c56d6e1a44e784fbaa6404f229bf/picxy298td0t.png'
       },
+    
 
       ],
       abilities:{
@@ -246,15 +257,15 @@ export default {
           ['Bootstrap Framework',4],['Vuetify',3.5], ['Python',4],
           ['JavaScript',3],['Node.js',3],['Express.js',3],
           ['Command line Interface',3],
-          ['JSON',3],
-          ['Vue.js',3],['C++',2],['Firebase',1]
+          ['JSON',3],['Networking',3],['devOps fundamentals',3],
+          ['Vue.js',3],['Docker',2.5],['C++',2],['Firebase',1]
         ],
         communication:[
-          ['Hindi(Mother Tongue)',4],['English',4],['Japanese(Konichiwa)',1]
+          ['Hindi (Mother Tongue)',4],['English',4],['Japanese( Konichiwa)',1]
         ],
         tools:[
           ['VsCode',3.5],['Postman',2.5],['Git/Github',3],['Figma',3],
-          ['Adobe Pohtoshop',3],['Linux',2]
+          ['Adobe Pohtoshop',3],['Linux',3]
         ]
 
 
