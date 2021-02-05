@@ -34,14 +34,14 @@
 
 
   <v-row class="d-flex flex-wrap-reverse" justify="center"  align="center" style="padding:30px;background:inherit">
-    <v-col cols="md-6 sm-12" align="center" >
+    <v-col cols="md-6 sm-12"  >
       <v-card  flat  style="background:inherit;border-radius:10px" >
-        <v-card-title class="display-2 font-weight-bold mb-4 ">Hello I'm Ankush.</v-card-title>
+        <v-card-title class="display-2 font-weight-bold mb-4 " >Hello! I'm Ankush.</v-card-title>
         <v-card-text>Currently Iam a engineering student at BVPCOEP . Iam a frontend developer , Although Iam capable of doing server side programming.
 
-        Iam a self taught programming enthusiast , I have done some projects using python then recently I switched to web , I love  vue.js and for backened i learnt node.js
-        I have a long way to go, there are a lot of things I want to learn and I think I have only covered a fraction of it, but with every passing day iam more closer to it..
-       And that really gives me hope :). Currently Iam learning devops
+        Iam a self taught programming enthusiast. I have done some projects using python then recently I switched to web . I love  vue.js and for backened , I learnt node.js
+        I have a long way to go, there are a lot of things I want to learn and I think I have only covered a fraction of it, but with every passing day Iam more closer to it..
+       And that really gives me hope :). Currently Iam learning devops .
          Iam actively looking for internship oppurtunities.<strong>Offers related to internship are highly welcome !</strong>
 
         </v-card-text>
@@ -50,7 +50,7 @@
 
     </v-col>
 
-    <v-col justify="start" align="center" cols="md-5 sm-12" class="offset-md-1">
+    <v-col  cols="md-4 sm-12" class="offset-md-1">
      <v-carousel cycle interval="3300" show-arrows-on-hover hide-delimiters height="300" >
        <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="90%" width="120%" :src="quote"></v-img></v-carousel-item>
 
@@ -68,7 +68,7 @@
     <v-row class="mb-7" fluid>
       <v-col>
         <v-card >
-         <v-sheet class="primary" dark  elevation="18"><v-card-title class="  offset-5" >Skills</v-card-title></v-sheet>
+         <v-sheet class="primary" dark  elevation="18"><v-card-title class="justify-center" >Skills</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
             <tr v-for="(skill ,key) in abilities.skills">
@@ -85,7 +85,7 @@
     <v-row class="mb-7">
       <v-col>
          <v-card >
-         <v-sheet dark class="primary" elevation="18"><v-card-title class="offset-5">Tools</v-card-title></v-sheet>
+         <v-sheet dark class="primary" elevation="18"><v-card-title class="justify-center">Tools</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
             <tr v-for="(skill ,key) in abilities.tools">
@@ -101,7 +101,7 @@
       <v-row class="mb-7">
       <v-col>
          <v-card>
-         <v-sheet dark class="primary" elevation="18"><v-card-title class="offset-md-5 sm-2" >Communication</v-card-title></v-sheet>
+         <v-sheet dark class="primary" elevation="18"><v-card-title class="justify-center" >Communication</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
             <tr v-for="(skill ,key) in abilities.communication">

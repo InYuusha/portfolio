@@ -35,6 +35,7 @@ a,a:hover,a:active,a:focus{
 }
 
 #title{
+    
 
     -webkit-text-fill-color:transparent;
     -webkit-background-clip: text;
