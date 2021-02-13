@@ -127,7 +127,8 @@
           <v-chip v-for="(tool,key) in project.tech" color="blue darken-2">{{tool}} </v-chip>
           <v-card-actions>
             <v-btn :href="project.github" icon><v-icon >mdi-github</v-icon></v-btn>
-            <v-btn :href="project.link" icon ><v-icon>mdi-application</v-icon></v-btn>
+            <v-btn v-if="project.link.length!=0" :href="project.link" icon ><v-icon>mdi-application</v-icon></v-btn>
+            <v-chip  v-else><v-icon>mdi-close</v-icon> Working link not available for this project</v-chip>
 
           </v-card-actions>
         </v-col>
@@ -162,6 +163,8 @@
    <div class="contact"  style="background-color:inherit">
       <v-card  >
       <v-card-title>Ask me anything </v-card-title>
+      <v-card-subtitle>Wanna collaborate on a project ?</v-card-subtitle>
+       <v-card-subtitle>Contact me on </v-card-subtitle>
       <v-card-actions>
         <v-btn icon href="mailto:asuse975@gmail.com?subject=subject&cc=cc@example.com"><v-icon x-large>mdi-gmail</v-icon></v-btn>
         <v-btn icon href="https://www.instagram.com/zeldoris_001/" x-large><v-icon  x-large>mdi-instagram</v-icon></v-btn>
@@ -224,6 +227,14 @@ export default {
         link:'http://auth975.herokuapp.com',
         img:'https://devfolio-prod.s3.ap-south-1.amazonaws.com/projects/343036c7a94842ca9d7058089cec1034/pickqkdhig36.png'
       },
+                  {
+        title:'A Realtime Chat App',
+        desc:'A Realtime Chat App with sockets',
+        github:'https://github.com/InYuusha/chat_app',
+        tech:['SOcket.io','Node.js','Express','JavaScript','Bootstrap'],
+        link:'',
+        img:'https://devfolio-prod.s3.ap-south-1.amazonaws.com/projects/2e95837c673a4a2ba3e6cccb729b2622/pici97w79ut1.png'
+      },
            {
         title:'Personal Portfolio',
         desc:'A Portfolio site using vue.js',
@@ -241,12 +252,20 @@ export default {
         img:'https://assets.devfolio.co/projects/e6f7de1204aa464cbd03969d333d0528/picmgahlnxui.png'
       },
               {
-        title:'A Blog app',
+        title:'A Blog app (Admin)',
         desc:'A CRUD based Blog application',
         github:'https://github.com/InYuusha/blog2',
         tech:['Vue.js','Node.js','MongoDB','Vuetify','Api'],
         link:'http://blog975.netlify.app',
         img:'https://devfolio-prod.s3.ap-south-1.amazonaws.com/projects/dc76c56d6e1a44e784fbaa6404f229bf/picxy298td0t.png'
+      },
+      {
+        title:'A Blog app (View)',
+        desc:'A  Blog application',
+        github:'https://github.com/InYuusha/blog2-view',
+        tech:['Vue.js','Vuetify','Api'],
+        link:'http://blog975-view.netlify.app',
+        img:'https://assets.devfolio.co/projects/aebfeebc44e34507b2d5972d1b03d06c/pic10uqpx5gr.png'
       },
     
 
@@ -275,7 +294,7 @@ export default {
   },
    mounted(){
       axios.get("https://blog975.herokuapp.com/api/posts/all")
-      .then(data=>{this.posts=data.data.result})
+      .then(data=>{this.posts=data.data.result.reverse()})
        .catch(err=>console.log(err))
   },
    methods:{
