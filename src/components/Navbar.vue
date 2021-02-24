@@ -39,6 +39,6 @@ a,a:hover,a:active,a:focus{
 
     -webkit-text-fill-color:transparent;
     -webkit-background-clip: text;
-    background:linear-gradient(to right , rgb(222, 150, 231),rgb(119, 230, 143))
+   background:linear-gradient(to right, rgba(0,55,90,0.82),rgba(244,96,96,0.75))
 }
 </style>

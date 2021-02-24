@@ -68,7 +68,7 @@
     <v-row class="mb-7" fluid>
       <v-col>
         <v-card >
-         <v-sheet class="primary" dark  elevation="18"><v-card-title class="justify-center" >Skills</v-card-title></v-sheet>
+         <v-sheet style="background:linear-gradient(to right, rgba(0,55,90,0.82),rgba(244,96,96,0.75))" dark  elevation="18"><v-card-title class="justify-center" >Skills</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
             <tr v-for="(skill ,key) in abilities.skills">
@@ -85,7 +85,7 @@
     <v-row class="mb-7">
       <v-col>
          <v-card >
-         <v-sheet dark class="primary" elevation="18"><v-card-title class="justify-center">Tools</v-card-title></v-sheet>
+         <v-sheet dark style="background:linear-gradient(to right, rgba(0,55,90,0.82),rgba(244,96,96,0.75))" elevation="18"><v-card-title class="justify-center">Tools</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
             <tr v-for="(skill ,key) in abilities.tools">
@@ -101,11 +101,11 @@
       <v-row class="mb-7">
       <v-col>
          <v-card>
-         <v-sheet dark class="primary" elevation="18"><v-card-title class="justify-center" >Communication</v-card-title></v-sheet>
+         <v-sheet style="background:linear-gradient(to right, rgba(0,55,90,0.82),rgba(244,96,96,0.75))" elevation="18"><v-card-title class="justify-center" >Communication</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
             <tr v-for="(skill ,key) in abilities.communication">
-              <td>{{skill[0]}}</td>
+              <td class="mt-2">{{skill[0]}}</td>
               <td><v-rating readonly v-model="skill[1]" half-increments small></v-rating></td>
             </tr>
           </thead>
@@ -124,11 +124,11 @@
         <v-col cols="md-6 sm-12">
           <v-card-title>{{project.title}}</v-card-title>
           <v-card-subtitle>{{project.desc}}</v-card-subtitle>
-          <v-chip v-for="(tool,key) in project.tech" color="blue darken-2">{{tool}} </v-chip>
+          <v-chip class="mx-1" v-for="(tool,key) in project.tech" color="indigo">{{tool}} </v-chip>
           <v-card-actions>
             <v-btn :href="project.github" icon><v-icon >mdi-github</v-icon></v-btn>
             <v-btn v-if="project.link.length!=0" :href="project.link" icon ><v-icon>mdi-application</v-icon></v-btn>
-            <v-chip  v-else><v-icon>mdi-close</v-icon> Working link not available for this project</v-chip>
+            <v-chip  v-else><v-icon>mdi-close</v-icon>No working link found</v-chip>
 
           </v-card-actions>
         </v-col>
@@ -166,9 +166,9 @@
       <v-card-subtitle>Wanna collaborate on a project ?</v-card-subtitle>
        <v-card-subtitle>Contact me on </v-card-subtitle>
       <v-card-actions>
-        <v-btn icon href="mailto:asuse975@gmail.com?subject=subject&cc=cc@example.com"><v-icon x-large>mdi-gmail</v-icon></v-btn>
-        <v-btn icon href="https://www.instagram.com/zeldoris_001/" x-large><v-icon  x-large>mdi-instagram</v-icon></v-btn>
-        <v-btn icon href="https://github.com/InYuusha" x-large><v-icon >mdi-github</v-icon></v-btn>
+        <v-btn icon href="mailto:asuse975@gmail.com?subject=subject&cc=cc@example.com" target="_blank"><v-icon x-large>mdi-gmail</v-icon></v-btn>
+        <v-btn icon href="https://www.instagram.com/zeldoris_001/" target="_blank" x-large><v-icon  x-large>mdi-instagram</v-icon></v-btn>
+        <v-btn icon href="https://github.com/InYuusha" target="_blank" x-large><v-icon >mdi-github</v-icon></v-btn>
       </v-card-actions>
     </v-card>
 
