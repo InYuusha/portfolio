@@ -213,9 +213,9 @@ export default {
     projects:[
       {
         title:'Family Diary',
-        desc:'Family diary is a diary app for writing about those important people in your life , You can write about their favourite things , you can even rate them accoding to your liking to them',
-        github:'https://github.com/InYuusha/InYuusha.github.io',
-        link:'https://inyuusha.github.io/',
+        desc:'Family diary is a diary app for writing about those important people in your life , You can write about their favourite things , you can even rate them accoding to your liking to them. frontend hosted on netlify , backend hosted on heroku.',
+        github:'https://github.com/InYuusha/family-dairy',
+        link:'http://family975.netlify.app',
         tech:['Vue.js','Node.js','MongoDB','Vuetify'],
         img:'https://assets.devfolio.co/hackathons/7de2289ce08f45da8caa0faa5af96e84/projects/07b9ba018753434aa3a352b827ff7e25/picf614j3fpr.png'
       },
@@ -238,7 +238,7 @@ export default {
            {
         title:'Personal Portfolio',
         desc:'A Portfolio site using vue.js',
-        github:'',
+        github:'https://github.com/InYuusha/portfolio',
         tech:['Vue.js','Node.js','MongoDB','Vuetify'],
         link:'http://inyuusha975.netlify.app',
         img:'https://assets.devfolio.co/projects/7abfd67bfb0141a79fe77c0568293659/pic9ubull827.png'
