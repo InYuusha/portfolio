@@ -36,11 +36,11 @@
   <v-row class="d-flex flex-wrap-reverse" justify="center"  align="center" style="padding:30px;background:inherit">
     <v-col cols="md-6 sm-12"  >
       <v-card  flat  style="background:inherit;border-radius:10px" >
-        <v-card-title class="display-2 font-weight-bold mb-4 " >Hello! I'm Ankush.</v-card-title>
-        <v-card-text>Currently Iam a engineering student at BVPCOEP . Iam a frontend developer , Although Iam capable of doing server side programming.
+        <v-card-title class="display-2 font-weight-bold mb-4 " >Hello! Iam Ankush.</v-card-title>
+        <v-card-text>Currently Iam a engineering student at BVPCOEP .
 
-        Iam a self taught programming enthusiast. I have done some projects using python then recently I switched to web . I love  vue.js and for backened , I learnt node.js
-        I have a long way to go, there are a lot of things I want to learn and I think I have only covered a fraction of it, but with every passing day Iam more closer to it..
+        Iam a self taught programming enthusiast and a full-stack developer. I have done some projects using python then recently I switched to web . I love  vue.js and for backened , I know node.js
+        I think have a long way to go, there are a lot of things I want to learn and I think I have only covered a fraction of it, but with every passing day Iam more closer to it..
        And that really gives me hope :). Currently Iam learning devops .
          Iam actively looking for internship oppurtunities.<strong>Offers related to internship are highly welcome !</strong>
 
@@ -120,7 +120,9 @@
        <v-card class="mb-7 offset-1" width="80%" dark v-for="(project ,key) in projects" :key="key">
       <v-row align="center" justify="center">
         <v-col cols="md-6 sm-12">
-          <v-img  max-width="400" max-height="450" :src="project.img"></v-img></v-col>
+          <v-img  max-width="400" max-height="450" :src="project.img"></v-img>
+          <vue-player v-if="project.vid" :src="require(`${project.vid}`)" :poster="require(`${project.vidThumb}`)" title="Travel Buddy" ></vue-player>
+          </v-col>
         <v-col cols="md-6 sm-12">
           <v-card-title>{{project.title}}</v-card-title>
           <v-card-subtitle>{{project.desc}}</v-card-subtitle>
@@ -186,13 +188,14 @@
 import axios from 'axios'
 import Navbar from '../components/Navbar.vue'
 import Dashboard from '../components/Dashboard.vue'
-
+import vuePlayer  from  '@algoz098/vue-player'
 
 export default {
   name: 'Home',
   components: {
     Dashboard,
-    Navbar
+    Navbar,
+    vuePlayer
 
   },
   data(){
@@ -211,14 +214,25 @@ export default {
     "https://wallpaperaccess.com/full/314827.jpg",
     "https://c4.wallpaperflare.com/wallpaper/836/933/123/keep-calm-coder-programming-code-wallpaper-preview.jpg"],
     projects:[
-      {
-        title:'Family Diary',
-        desc:'Family diary is a diary app for writing about those important people in your life , You can write about their favourite things , you can even rate them accoding to your liking to them. frontend hosted on netlify , backend hosted on heroku.',
-        github:'https://github.com/InYuusha/family-dairy',
-        link:'http://family975.netlify.app',
-        tech:['Vue.js','Node.js','MongoDB','Vuetify'],
-        img:'https://assets.devfolio.co/hackathons/7de2289ce08f45da8caa0faa5af96e84/projects/07b9ba018753434aa3a352b827ff7e25/picf614j3fpr.png'
+        {
+        title:'Travel Buddy',
+        desc:'Travel Buddy is travel blog app , You can create your account and share your travel stories with other',
+        github:'https://github.com/InYuusha/travelBuddy',
+        link:'',
+        tech:['Express', 'Nodejs', 'mysql', 'mongodb','bcrypt','Passport' ,'Ejs'],
+        vid:'./travel.mp4',
+        vidThumb:'./travel.png'
       },
+         {
+        title:'My Tech blogs',
+        desc:'A Demo Full-stack app ',
+        github:'https://github.com/InYuusha/gallery',
+        tech:['Vue.js','Node.js','MongoDB','Vuetify','Express'],
+        link:'',
+        vid:'./vuex.mp4',
+        vidThumb:'./vuex.png'
+      },
+   
                    {
         title:'User Authentication System',
         desc:'User Authentication using Node.js  , mongoose ,  mongodb , passport.js',
@@ -231,7 +245,7 @@ export default {
         title:'A Realtime Chat App',
         desc:'A Realtime Chat App with sockets',
         github:'https://github.com/InYuusha/chat_app',
-        tech:['SOcket.io','Node.js','Express','JavaScript','Bootstrap'],
+        tech:['Socket.io','Node.js','Express','JavaScript','Bootstrap'],
         link:'',
         img:'https://devfolio-prod.s3.ap-south-1.amazonaws.com/projects/2e95837c673a4a2ba3e6cccb729b2622/pici97w79ut1.png'
       },
@@ -259,32 +273,32 @@ export default {
         link:'http://blog975.netlify.app',
         img:'https://devfolio-prod.s3.ap-south-1.amazonaws.com/projects/dc76c56d6e1a44e784fbaa6404f229bf/picxy298td0t.png'
       },
-      {
-        title:'A Blog app (View)',
-        desc:'A  Blog application',
-        github:'https://github.com/InYuusha/blog2-view',
-        tech:['Vue.js','Vuetify','Api'],
-        link:'http://blog975-view.netlify.app',
-        img:'https://assets.devfolio.co/projects/aebfeebc44e34507b2d5972d1b03d06c/pic10uqpx5gr.png'
+         {
+        title:'Family Diary',
+        desc:'Family diary is a diary app for writing about those important people in your life , You can write about their favourite things , you can even rate them accoding to your liking to them. frontend hosted on netlify , backend hosted on heroku.',
+        github:'https://github.com/InYuusha/family-dairy',
+        link:'http://family975.netlify.app',
+        tech:['Vue.js','Node.js','MongoDB','Vuetify'],
+        img:'https://assets.devfolio.co/hackathons/7de2289ce08f45da8caa0faa5af96e84/projects/07b9ba018753434aa3a352b827ff7e25/picf614j3fpr.png'
       },
+
     
 
       ],
       abilities:{
         skills:[
          ['HTML(5)',4],['CSS(3)',4],
-          ['Bootstrap Framework',4],['Vuetify',3.5], ['Python',4],
-          ['JavaScript',3],['Node.js',3],['Express.js',3],
-          ['Command line Interface',3],
-          ['JSON',3],['Networking',3],['devOps fundamentals',3],
-          ['Vue.js',3],['Docker',2.5],['C++',2],['Firebase',1]
+          ['Bootstrap Framework',4],['Python',4],['Vuetify',3.5],['Mongodb',3.5],
+          ['Command line Interface',3],['Mysql',3],
+          ['JSON',3],['Networking',3],['DevOps fundamentals',3],
+          ['Vue.js',3],['C++',2],['Firebase',1]
         ],
         communication:[
           ['Hindi (Mother Tongue)',4],['English',4],['Japanese( Konichiwa)',1]
         ],
         tools:[
           ['VsCode',3.5],['Postman',2.5],['Git/Github',3],['Figma',3],
-          ['Adobe Pohtoshop',3],['Linux',3]
+          ['Adobe Pohtoshop',3],['Linux',3],['Docker',2.5]
         ]
 
 

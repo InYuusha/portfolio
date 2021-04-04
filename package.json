@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@algoz098/vue-player": "^0.4.3",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
