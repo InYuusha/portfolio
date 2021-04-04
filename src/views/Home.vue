@@ -121,7 +121,7 @@
       <v-row align="center" justify="center">
         <v-col cols="md-6 sm-12">
           <v-img  max-width="400" max-height="450" :src="project.img"></v-img>
-          <vue-player v-if="project.vid" :src="require(`${project.vid}`)" :poster="require(`${project.vidThumb}`)" title="Travel Buddy" ></vue-player>
+          <vue-player v-if="project.vid" :src="require(`${project.vid.vidLink}`)" :poster="require(`${project.vid.vidThumb}`)" :title="project.vid.title" ></vue-player>
           </v-col>
         <v-col cols="md-6 sm-12">
           <v-card-title>{{project.title}}</v-card-title>
@@ -220,8 +220,11 @@ export default {
         github:'https://github.com/InYuusha/travelBuddy',
         link:'',
         tech:['Express', 'Nodejs', 'mysql', 'mongodb','bcrypt','Passport' ,'Ejs'],
-        vid:'./travel.mp4',
-        vidThumb:'./travel.png'
+        vid:{
+          vidLink:'./travel.mp4',
+        vidThumb:'./travel.png',
+        title:"Travel Blogs"
+        }
       },
          {
         title:'My Tech blogs',
@@ -229,8 +232,12 @@ export default {
         github:'https://github.com/InYuusha/gallery',
         tech:['Vue.js','Node.js','MongoDB','Vuetify','Express'],
         link:'',
-        vid:'./vuex.mp4',
-        vidThumb:'./vuex.png'
+        vid:{
+          vidLink:'./vuex.mp4',
+        vidThumb:'./vuex.png',
+        title:'Tech Blogs'
+        }
+        
       },
    
                    {
