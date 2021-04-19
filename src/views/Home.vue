@@ -33,7 +33,7 @@
 
 
 
-  <v-row class="d-flex flex-wrap-reverse" justify="center"  align="center" style="padding:30px;background:inherit">
+  <v-row class="d-flex flex-wrap-reverse"   align="center" style="padding:5px;background:inherit">
     <v-col cols="md-6 sm-12"  >
       <v-card  flat  style="background:inherit;border-radius:10px" >
         <v-card-title class="display-1 font-weight-bold mb-4 " >Hello! I'm Ankush.</v-card-title>
