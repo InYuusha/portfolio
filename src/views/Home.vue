@@ -36,7 +36,11 @@
   <v-row class="d-flex flex-wrap-reverse"   align="center" style="padding:5px;background:inherit">
     <v-col cols="md-6 sm-12"  >
       <v-card  flat  style="background:inherit;border-radius:10px" >
-        <v-card-title class="display-1 font-weight-bold mb-4 " >Hello! I'm Ankush.</v-card-title>
+      
+      <vue-typed-js :backSpeed="80" :loop="true" :typeSpeed="150" :strings="['Hello !',' Iam Ankush']">
+        <v-card-title class="display-1 font-weight-bold"><span class="typing"></span></v-card-title>
+      </vue-typed-js>
+  
         <v-card-text>Currently Iam a engineering student at BVPCOEP .
 
         Iam a self taught programming enthusiast and a full-stack developer. I have done some projects using python then recently I switched to web . I love  vue.js and for backened , I know node.js
@@ -317,6 +321,9 @@ export default {
       axios.get("https://blog975.herokuapp.com/api/posts/all")
       .then(data=>{this.posts=data.data.result.reverse()})
        .catch(err=>console.log(err))
+
+
+
   },
    methods:{
     toggleDialog(){
