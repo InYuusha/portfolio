@@ -3,7 +3,7 @@
 
       <v-toolbar flat  class="mb-7" style="background:inherit">
 
-      <v-toolbar-title id="title" class="font-weight-bold display-1"><span class="text-uppercase font-weight-light">singh</span>ANKUSH</v-toolbar-title>
+      <v-toolbar-title id="title" class="text-uppercase font-weight-"><span style="font-family:Snell Roundhand, cursive;font-size:30px;" class="text-lowercase  font-weight-light">singh</span>ANKUSH</v-toolbar-title>
 
       <v-spacer></v-spacer>
        <template v-slot:extension >
@@ -37,7 +37,7 @@
     <v-col cols="md-6 sm-12"  >
       <v-card  flat  style="background:inherit;border-radius:10px" >
       
-      <vue-typed-js :backSpeed="80" :loop="true" :typeSpeed="150" :strings="['Hello !',' Iam Ankush']">
+      <vue-typed-js :backSpeed="80" :loop="true" :typeSpeed="150" :strings="['Hello World !',' Iam Ankush']">
         <v-card-title class="display-1 font-weight-bold"><span class="typing"></span></v-card-title>
       </vue-typed-js>
   
@@ -56,7 +56,7 @@
 
     <v-col  cols="md-4 sm-12" class="offset-md-1">
      <v-carousel cycle interval="3300" show-arrows-on-hover hide-delimiters height="300" >
-       <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="90%" width="120%" :src="quote"></v-img></v-carousel-item>
+       <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="90%" width="120%" :src="require(`${quote}`)"></v-img></v-carousel-item>
 
 
      </v-carousel>
@@ -211,12 +211,15 @@ export default {
       content:"",
     pages:['About','Abilities','Projects','Blog','Contact'],
     tab:null,
-    quotes:["https://www.adaptnetwork.com/inspirational-quotes/wp-content/uploads/2017/12/inspirational-quotes-best-dreams-happen-awake.jpg",
-    "https://wisdomquotessecure-af2a.kxcdn.com/wp-content/uploads/dream-quotes-nothing-happens-unless-first-a-dream-carl-sandburg-wisdom-quotes.jpg",
-    "https://cdn.shopify.com/s/files/1/0017/0432/9285/files/programming-quotes-for-developers-made4dev-code-as-if.jpg?v=1539287546",
-    "https://protocoderspoint.com/wp-content/uploads/2020/01/First-solve-the-problem.-Then-write-the-code.jpeg",
-    "https://wallpaperaccess.com/full/314827.jpg",
-    "https://c4.wallpaperflare.com/wallpaper/836/933/123/keep-calm-coder-programming-code-wallpaper-preview.jpg"],
+
+    quotes:["./imgs/go-min.png",
+            "./imgs/p2.webp",
+            "./imgs/p1-min.jpeg",
+            "./imgs/p3-min.jpg",
+            "./imgs/p4-min.jpeg"
+            
+    ],
+
     projects:[
         {
         title:'Travel Buddy',
@@ -225,8 +228,8 @@ export default {
         link:'',
         tech:['Express', 'Nodejs', 'mysql', 'mongodb','bcrypt','Passport' ,'Ejs'],
         vid:{
-          vidLink:'./travel.mp4',
-        vidThumb:'./travel.png',
+          vidLink:'./vids/travel.mp4',
+        vidThumb:'./vids/travel.png',
         title:"Travel Blogs"
         }
       },
@@ -237,8 +240,8 @@ export default {
         tech:['Vue.js','Node.js','MongoDB','Vuetify','Express'],
         link:'',
         vid:{
-          vidLink:'./vuex.mp4',
-        vidThumb:'./vuex.png',
+          vidLink:'./vids/vuex.mp4',
+        vidThumb:'./vids/vuex.png',
         title:'Tech Blogs'
         }
         
