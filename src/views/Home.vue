@@ -41,11 +41,12 @@
         <v-card-title class="display-1 font-weight-bold"><span class="typing"></span></v-card-title>
       </vue-typed-js>
   
-        <v-card-text>Currently Iam a engineering student at BVPCOEP .
+        <v-card-text>Iam a javascript developer
+          I have worked with nodejs, mysql, mongodb and vuejs.
+          Also I have done some projects on python specifically opencv, pygame, etc
+          Currently Iam learning devops stuffs and some golang.
 
-        Iam a self taught programming enthusiast and a full-stack developer. I have done some projects using python then recently I switched to web . I love  vue.js and for backened , I know node.js
-        I think have a long way to go, there are a lot of things I want to learn and I think I have only covered a fraction of it, but with every passing day Iam more closer to it..
-       And that really gives me hope :). Currently Iam learning devops .
+    
          Iam actively looking for internship oppurtunities.<strong>Offers related to internship are highly welcome !</strong>
 
         </v-card-text>
@@ -303,9 +304,9 @@ export default {
         skills:[
          ['HTML(5)',4],['CSS(3)',4],
           ['Bootstrap Framework',4],['Python',4],['Vuetify',3.5],['Mongodb',3.5],
-          ['Command line Interface',3],['Mysql',3],
+          ['C++',3.5],['Command line Interface',3],['Mysql',3],
           ['JSON',3],['Networking',3],['DevOps fundamentals',3],
-          ['Vue.js',3],['C++',2],['Firebase',1]
+          ['Vue.js',3],['Golang',2],['Firebase',1]
         ],
         communication:[
           ['Hindi (Mother Tongue)',4],['English',4],['Japanese( Konichiwa)',1]
