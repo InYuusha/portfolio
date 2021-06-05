@@ -238,6 +238,14 @@ export default {
         }
       },
          {
+        title:'AnimDaemon',
+        desc:'A Cross-platform anime quote application with Server-side-rendering and Pwa implementation',
+        github:'https://github.com/InYuusha/animeQuotesBasic',
+          tech:['Nuxtjs','Vuejs','Api','Tailwind Css'],
+        link:'https://animdaemon.vercel.app/',
+        img:'https://devfolio-prod.s3.ap-south-1.amazonaws.com/projects/71c81d1b9bf14ad497553e5dceefd7cb/20149018-6967-4071-8c6c-f52a44b30be3.jpeg'
+      },
+         {
         title:'My Tech blogs',
         desc:'A Demo Full-stack app ',
         github:'https://github.com/InYuusha/gallery',
@@ -273,16 +281,9 @@ export default {
         github:'https://github.com/InYuusha/portfolio',
         tech:['Vue.js','Node.js','MongoDB','Vuetify'],
         link:'http://inyuusha975.netlify.app',
-        img:'https://assets.devfolio.co/projects/7abfd67bfb0141a79fe77c0568293659/pic9ubull827.png'
+        img:'https://devfolio-prod.s3.ap-south-1.amazonaws.com/projects/7abfd67bfb0141a79fe77c0568293659/0dd06d2b-371d-47a3-8a47-b6ddd99f8b56.png'
       },
-           {
-        title:'Weather Application',
-        desc:'A Simple weather application , Enter your city and get weather details...',
-        github:'https://github.com/InYuusha/weather',
-          tech:['Express.js','Node.js','Api','Bootstrap'],
-        link:'',
-        img:'https://assets.devfolio.co/projects/e6f7de1204aa464cbd03969d333d0528/picmgahlnxui.png'
-      },
+        
               {
         title:'A Blog app (Admin)',
         desc:'A CRUD based Blog application',
@@ -306,7 +307,7 @@ export default {
       abilities:{
         skills:[
          ['HTML(5)',4],['CSS(3)',4],
-          ['Bootstrap Framework',4],['Python',4],['Vuetify',3.5],['Nodejs',3.5],['Tailwind Css',3.5],['Mongodb',3.5],
+          ['Bootstrap Framework',4],['Python',4],['Vuetify',3.5],['Nodejs',3.5],['Express',3.5],['Tailwind Css',3.5],['Mongodb',3.5],
           ['C++',3.5],['Command line Interface',3],['Mysql',3],
           ['JSON',3],['Networking',3],['DevOps fundamentals',3],
           ['Vue.js',3],['Nuxtjs',3],['Golang',2],['Firebase',1]
