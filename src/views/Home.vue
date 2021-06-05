@@ -128,7 +128,7 @@
 
         <v-col cols="md-6 sm-12">
           <v-img  max-width="400" max-height="450" :src="project.img"></v-img>
-          <vue-player style="width:400px" v-if="project.vid" :src="require(`${project.vid.vidLink}`)" :poster="require(`${project.vid.vidThumb}`)" :title="project.vid.title" ></vue-player>
+          <vue-player style="width:300px" v-if="project.vid" :src="require(`${project.vid.vidLink}`)" :poster="require(`${project.vid.vidThumb}`)" :title="project.vid.title" ></vue-player>
           </v-col>
 
         <v-col cols="md-6 sm-12"  >
