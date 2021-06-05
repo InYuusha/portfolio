@@ -57,7 +57,7 @@
 
     <v-col  cols="md-4 sm-12" class="offset-md-1">
      <v-carousel cycle interval="3300" show-arrows-on-hover hide-delimiters height="300" >
-       <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="90%" width="120%" :src="require(`${quote}`)"></v-img></v-carousel-item>
+       <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="90" min-height="220" min-width="240" width="120%" :src="require(`${quote}`)"></v-img></v-carousel-item>
 
 
      </v-carousel>
@@ -76,7 +76,7 @@
          <v-sheet style="background:linear-gradient(to right, rgba(0,55,90,0.82),rgba(244,96,96,0.75))" dark  elevation="18"><v-card-title class="justify-center" >Skills</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
-            <tr v-for="(skill ,key) in abilities.skills">
+            <tr v-for="(skill ,key) in abilities.skills" :key="key">
               <td>{{skill[0]}}</td>
               <td><v-rating readonly v-model="skill[1]" half-increments small></v-rating></td>
             </tr>
@@ -93,7 +93,7 @@
          <v-sheet dark style="background:linear-gradient(to right, rgba(0,55,90,0.82),rgba(244,96,96,0.75))" elevation="18"><v-card-title class="justify-center">Tools</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
-            <tr v-for="(skill ,key) in abilities.tools">
+            <tr v-for="(skill ,key) in abilities.tools" :key="key" >
               <td>{{skill[0]}}</td>
               <td><v-rating readonly v-model="skill[1]" half-increments small></v-rating></td>
             </tr>
@@ -109,7 +109,7 @@
          <v-sheet style="background:linear-gradient(to right, rgba(0,55,90,0.82),rgba(244,96,96,0.75))" elevation="18"><v-card-title class="justify-center" >Communication</v-card-title></v-sheet>
            <v-simple-table height="300px">
           <thead>
-            <tr v-for="(skill ,key) in abilities.communication">
+            <tr v-for="(skill ,key) in abilities.communication" :key="key">
               <td class="mt-2">{{skill[0]}}</td>
               <td><v-rating readonly v-model="skill[1]" half-increments small></v-rating></td>
             </tr>
@@ -123,15 +123,18 @@
   <v-tab-item :key="pages[2]">
     <div class="project">
        <v-card class="mb-7 offset-1" width="80%" dark v-for="(project ,key) in projects" :key="key">
-      <v-row align="center" justify="center">
+
+      <v-row class="d-flex flex-wrap" align="center" justify="center">
+
         <v-col cols="md-6 sm-12">
           <v-img  max-width="400" max-height="450" :src="project.img"></v-img>
-          <vue-player v-if="project.vid" :src="require(`${project.vid.vidLink}`)" :poster="require(`${project.vid.vidThumb}`)" :title="project.vid.title" ></vue-player>
+          <vue-player style="width:400px" v-if="project.vid" :src="require(`${project.vid.vidLink}`)" :poster="require(`${project.vid.vidThumb}`)" :title="project.vid.title" ></vue-player>
           </v-col>
-        <v-col cols="md-6 sm-12">
+
+        <v-col cols="md-6 sm-12"  >
           <v-card-title>{{project.title}}</v-card-title>
           <v-card-subtitle>{{project.desc}}</v-card-subtitle>
-          <v-chip class="mx-1" v-for="(tool,key) in project.tech" color="indigo">{{tool}} </v-chip>
+          <v-chip class="mx-1" v-for="(tool,key) in project.tech" :key="key" color="indigo">{{tool}} </v-chip>
           <v-card-actions>
             <v-btn :href="project.github" icon><v-icon >mdi-github</v-icon></v-btn>
             <v-btn v-if="project.link.length!=0" :href="project.link" icon ><v-icon>mdi-application</v-icon></v-btn>
@@ -303,10 +306,10 @@ export default {
       abilities:{
         skills:[
          ['HTML(5)',4],['CSS(3)',4],
-          ['Bootstrap Framework',4],['Python',4],['Vuetify',3.5],['Mongodb',3.5],
+          ['Bootstrap Framework',4],['Python',4],['Vuetify',3.5],['Nodejs',3.5],['Tailwind Css',3.5],['Mongodb',3.5],
           ['C++',3.5],['Command line Interface',3],['Mysql',3],
           ['JSON',3],['Networking',3],['DevOps fundamentals',3],
-          ['Vue.js',3],['Golang',2],['Firebase',1]
+          ['Vue.js',3],['Nuxtjs',3],['Golang',2],['Firebase',1]
         ],
         communication:[
           ['Hindi (Mother Tongue)',4],['English',4],['Japanese( Konichiwa)',1]
