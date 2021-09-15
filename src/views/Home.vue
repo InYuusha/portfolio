@@ -33,7 +33,7 @@
 
 
 
-  <v-row class="d-flex flex-wrap-reverse "   align="center" style="padding:10px;background:inherit;margin:10px;">
+  <v-row class="d-flex flex-wrap-reverse "   align="center" style="padding:10px;background:inherit;">
     <v-col cols="md-6 sm-12"  >
       <v-card  flat  style="background:inherit;border-radius:10px" >
       
