@@ -48,7 +48,7 @@
           
           Currently Iam learning devOps stuff and trying to socialize.
 
-         Iam actively looking for internship oppurtunities.<strong>Offers related to internship are highly welcome !</strong>
+         I'm actively looking for internship oppurtunities. <strong>Offers related to internship are highly welcome !</strong>
 
         </v-card-text>
 
