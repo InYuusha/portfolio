@@ -37,6 +37,14 @@ export default{
     data(){
           return{
                 projects:[
+                       {
+        title:'Realtime Notification System',
+        desc:'Notification system , Implemented websockets used serverless architecture and implemented authentication using authoriser. Used dynamoDb for storing client data.',
+        github:'https://github.com/InYuusha/notificationSystem',
+        tech:['AWS Lambda','Nodejs','AWS Apigateway','Websockets','Dynamodb','Mysql'],
+        link:'',
+        img:'https://miro.medium.com/max/1400/1*cK1Fb7RsEuzlnnPC3zgrog.png'
+      },
         {
         title:'Travel Buddy',
         desc:'Travel Buddy is travel blog app , You can create your account and share your travel stories with other',
@@ -71,14 +79,7 @@ export default{
         
       },
    
-                   {
-        title:'User Authentication System',
-        desc:'User Authentication using Node.js  , mongoose ,  mongodb , passport.js',
-        github:'https://github.com/InYuusha/user_auth',
-        tech:['Passport.js','Node.js','MongoDB','bcrypt'],
-        link:'http://auth975.herokuapp.com',
-        img:'https://devfolio-prod.s3.ap-south-1.amazonaws.com/projects/343036c7a94842ca9d7058089cec1034/pickqkdhig36.png'
-      },
+              
                   {
         title:'A Realtime Chat App',
         desc:'A Realtime Chat App with sockets',
