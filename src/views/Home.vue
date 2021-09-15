@@ -58,7 +58,7 @@
 
     <v-col  cols="md-4 sm-12" class="offset-md-1">
      <v-carousel class="pt-3" cycle interval="3300" show-arrows-on-hover hide-delimiters height="300" >
-       <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="90" min-height="250" min-width="260" width="120%" :src="quote"></v-img></v-carousel-item>
+       <v-carousel-item v-for="(quote,key) in quotes" :key="key"><v-img height="90" min-height="250" min-width="260" width="120%" :src="require(`${quote}`)"></v-img></v-carousel-item>
 
 
      </v-carousel>
@@ -133,11 +133,11 @@ export default {
     pages:['About','Abilities','Projects','Blog','Contact'],
     tab:null,
 
-    quotes:["https://folio975.s3.ap-south-1.amazonaws.com/go-min.png",
-            "https://folio975.s3.ap-south-1.amazonaws.com/p2.webp",
-            "https://folio975.s3.ap-south-1.amazonaws.com/p1-min.jpeg",
-            "https://folio975.s3.ap-south-1.amazonaws.com/p3-min.jpg",
-            "https://folio975.s3.ap-south-1.amazonaws.com/p4-min.jpeg"
+    quotes:["./imgs/go-min.png",
+            "./imgs/p2.webp",
+            "./imgs/p1-min.jpeg",
+            "./imgs/p3-min.jpg",
+            "./imgs/p4-min.jpeg"
             
     ],
 
