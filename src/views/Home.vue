@@ -42,7 +42,7 @@
       </vue-typed-js>
   
         <v-card-text style="font-size:16px">I'm a Javascript developer
-          Recently I shifted to golang , I'v some experience with MEVN stack and
+          recently I shifted to go , I'v some experience with MEVN stack and
 
           I've been exploring Serverless, Monolith and Microservices.
           
