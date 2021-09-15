@@ -37,16 +37,16 @@
     <v-col cols="md-6 sm-12"  >
       <v-card  flat  style="background:inherit;border-radius:10px" >
       
-      <vue-typed-js :backSpeed="80" :loop="true" :typeSpeed="150" :strings="['Hello World !',' Iam Ankush']">
+      <vue-typed-js :backSpeed="80" :loop="true" :typeSpeed="150" :strings="['Hello World !',' I am Ankush']">
         <v-card-title class="display-1 font-weight-bold"><span class="typing"></span></v-card-title>
       </vue-typed-js>
   
-        <v-card-text style="font-size:17px">I'm a Javascript developer
-          who recently shifted to golang ,I'v some experience with MEVN stack
+        <v-card-text style="font-size:16px">I'm a Javascript developer
+          Recently I shifted to golang , I'v some experience with MEVN stack and
 
-          I've been exploring Serverless, Monolith and Microservices
+          I've been exploring Serverless, Monolith and Microservices.
           
-          Currently Iam learning devOps stuff.
+          Currently Iam learning devOps stuff and trying to socialize.
 
          Iam actively looking for internship oppurtunities.<strong>Offers related to internship are highly welcome !</strong>
 
